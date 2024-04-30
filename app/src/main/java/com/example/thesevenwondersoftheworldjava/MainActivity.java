@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 
 import com.example.thesevenwondersoftheworldjava.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -38,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         landmarkArrayList.add(halicarnassus);
         landmarkArrayList.add(rhodes);
         landmarkArrayList.add(alexandria);
+
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,
+                landmarkArrayList.stream().map(landmark -> landmark.name).collect(Collectors.toList()));
+        binding.listView.setAdapter(arrayAdapter);
 
     }
 }
