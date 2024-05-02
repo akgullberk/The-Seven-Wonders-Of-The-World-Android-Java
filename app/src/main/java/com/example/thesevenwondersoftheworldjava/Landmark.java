@@ -1,6 +1,10 @@
 package com.example.thesevenwondersoftheworldjava;
 
-public class Landmark {
+import java.io.Serializable;
+
+public class Landmark implements Serializable {
+
+
 
     String name,country;
     int image;
