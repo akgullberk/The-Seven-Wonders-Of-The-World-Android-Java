@@ -1,6 +1,7 @@
 package com.example.thesevenwondersoftheworldjava;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -44,20 +45,9 @@ public class MainActivity extends AppCompatActivity {
         landmarkArrayList.add(rhodes);
         landmarkArrayList.add(alexandria);
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,
-                landmarkArrayList.stream().map(landmark -> landmark.name).collect(Collectors.toList()));
-        binding.listView.setAdapter(arrayAdapter);
-
-        binding.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //Toast.makeText(MainActivity.this,landmarkArrayList.get(position).name,Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
-                intent.putExtra("landmark",landmarkArrayList.get(position));
-
-                startActivity(intent);
-            }
-        });
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        LandmarkAdapter landmarkAdapter=new LandmarkAdapter(landmarkArrayList);
+        binding.recyclerView.setAdapter(landmarkAdapter);
 
     }
 }
