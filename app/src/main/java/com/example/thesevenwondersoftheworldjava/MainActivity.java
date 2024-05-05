@@ -16,8 +16,8 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity {
-    private ActivityMainBinding binding;
-    ArrayList<Landmark> landmarkArrayList;
+    private ActivityMainBinding binding; // XML dosyasındaki bileşenlere erişmek için bağlantı noktası
+    ArrayList<Landmark> landmarkArrayList; // Harika nesnelerinin listesi
 
 
     @Override
@@ -27,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        landmarkArrayList = new ArrayList<>();
+        landmarkArrayList = new ArrayList<>(); // Harika nesnelerinin listesini oluştur
 
+
+        // Harika nesnelerini oluştur ve listeye ekle
         Landmark giza = new Landmark("The Great Pyramid of Giza","Egypt",R.drawable.gizapyramid);
         Landmark babylon = new Landmark("The Hanging Gardens of Babylon","Babylon",R.drawable.babylongardens);
         Landmark zeus = new Landmark("The Statue of Zeus at Olympia","Olympia",R.drawable.statuezeus);
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         Landmark rhodes = new Landmark("The Colossus of Rhodes","Rodos",R.drawable.statuezeus);
         Landmark alexandria = new Landmark("The Lighthouse of Alexandria","Alexandria",R.drawable.alexandrialighthouse);
 
+
+        // Harika nesnelerini listeye ekle
         landmarkArrayList.add(giza);
         landmarkArrayList.add(babylon);
         landmarkArrayList.add(zeus);
@@ -45,7 +49,11 @@ public class MainActivity extends AppCompatActivity {
         landmarkArrayList.add(rhodes);
         landmarkArrayList.add(alexandria);
 
+
+        // RecyclerView için LinearLayoutManager ayarla
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        // Harika öğeleri göstermek için bir adaptör oluştur ve RecyclerView'a ata
         LandmarkAdapter landmarkAdapter=new LandmarkAdapter(landmarkArrayList);
         binding.recyclerView.setAdapter(landmarkAdapter);
 

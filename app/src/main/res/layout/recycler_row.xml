@@ -6,7 +6,9 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     >
-    
+    <!-- Her bir RecyclerView öğesini içeren bir LinearLayout. -->
+
+
     <TextView
         android:id="@+id/recyclerViewTextView"
         android:layout_width="match_parent"
@@ -17,5 +19,6 @@
         >
 
     </TextView>
+    <!-- TextView, her bir harika adını gösterir. -->
 
 </LinearLayout>

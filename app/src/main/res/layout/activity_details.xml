@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".DetailsActivity">
 
+
+    <!-- Harika resmini gösteren ImageView -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="355dp"
@@ -16,6 +18,8 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
+
+    <!-- Harika adını gösteren TextView -->
     <TextView
         android:id="@+id/nameText"
         android:layout_width="310dp"
@@ -28,6 +32,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+
+    <!-- Harikanın ülkesini gösteren TextView -->
     <TextView
         android:id="@+id/countryText"
         android:layout_width="192dp"

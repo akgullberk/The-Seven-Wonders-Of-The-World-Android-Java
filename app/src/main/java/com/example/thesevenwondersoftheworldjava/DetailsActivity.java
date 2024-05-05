@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.example.thesevenwondersoftheworldjava.databinding.ActivityDetailsBinding;
 
 public class DetailsActivity extends AppCompatActivity {
-    private ActivityDetailsBinding binding;
+    private ActivityDetailsBinding binding; // Veri bağlamak için kullanılan binding değişkeni
 
 
 
@@ -22,17 +22,19 @@ public class DetailsActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        //Intent intent =getIntent();
 
+
+
+        //  Singleton desenini kullanarak seçilen harikanın bilgilerini alır
         Singleton singleton = Singleton.getInstance();
-        Landmark selectedLandmark = singleton.getSentLandmark();
+        Landmark selectedLandmark = singleton.getSentLandmark(); // Seçilen harika bilgilerini Singleton aracılığıyla alır
 
 
-        //Landmark selectedLandmark = (Landmark) intent.getSerializableExtra("landmark");
 
-        binding.nameText.setText(selectedLandmark.name);
-        binding.countryText.setText(selectedLandmark.country);
-        binding.imageView.setImageResource(selectedLandmark.image);
+        // Arayüzdeki TextView ve ImageView'e seçilen harikanın bilgilerini yerleştirir
+        binding.nameText.setText(selectedLandmark.name); // Harikanın adını gösteren TextView'e adı yerleştirir
+        binding.countryText.setText(selectedLandmark.country); // Harikanın ülkesini gösteren TextView'e ülke adını yerleştirir
+        binding.imageView.setImageResource(selectedLandmark.image); // Harikanın resmini gösteren ImageView'e resmi yerleştirir
 
 
     }
