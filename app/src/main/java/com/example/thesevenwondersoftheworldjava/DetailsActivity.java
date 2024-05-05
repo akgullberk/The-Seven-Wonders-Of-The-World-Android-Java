@@ -1,5 +1,6 @@
 package com.example.thesevenwondersoftheworldjava;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -21,8 +22,13 @@ public class DetailsActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        Intent intent =getIntent();
-        Landmark selectedLandmark = (Landmark) intent.getSerializableExtra("landmark");
+        //Intent intent =getIntent();
+
+        Singleton singleton = Singleton.getInstance();
+        Landmark selectedLandmark = singleton.getSentLandmark();
+
+
+        //Landmark selectedLandmark = (Landmark) intent.getSerializableExtra("landmark");
 
         binding.nameText.setText(selectedLandmark.name);
         binding.countryText.setText(selectedLandmark.country);

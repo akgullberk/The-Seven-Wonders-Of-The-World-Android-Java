@@ -17,8 +17,8 @@ import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
-
     ArrayList<Landmark> landmarkArrayList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
