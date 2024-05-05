@@ -1,5 +1,6 @@
 package com.example.thesevenwondersoftheworldjava;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,7 +29,7 @@ public class LandmarkAdapter extends RecyclerView.Adapter<LandmarkAdapter.Landma
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LandmarkHolder holder, int position) {
+    public void onBindViewHolder(@NonNull LandmarkHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.binding.recyclerViewTextView.setText(landmarkArrayList.get(position).name);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
