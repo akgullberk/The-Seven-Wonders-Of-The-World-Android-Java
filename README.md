@@ -1,9 +1,13 @@
-The Seven Wonders of the World (Android App)
+THE SEVEN WONDERS OF THE WORLD (ANDROİD APP)
+---------------------------------------------------------------------
 This is a simple Android application that lists the Seven Wonders of the Ancient World and displays details about each wonder when clicked. It demonstrates the use of RecyclerView and passing data between activities.
-Features
-Displays a list of the Seven Wonders of the Ancient World using RecyclerView.
-Clicking on a wonder displays its details including name, description, and an image.
+FEATURES
+-Displays a list of the Seven Wonders of the Ancient World using RecyclerView.
+-Clicking on a wonder displays its details including name, description, and an image.
 
+
+SCREENSHOTS
+-------------------
 ![Screenshot_20240505_211147](https://github.com/akgullberk/The-Seven-Wonders-Of-The-World-Android-Java/assets/108866525/4ca15551-4479-4921-9837-20ff537a376d)
 ![Screenshot_20240505_211312](https://github.com/akgullberk/The-Seven-Wonders-Of-The-World-Android-Java/assets/108866525/4bec5cf1-5072-48d6-893d-0806fe4c0947)
 ![Screenshot_20240505_211304](https://github.com/akgullberk/The-Seven-Wonders-Of-The-World-Android-Java/assets/108866525/243a44f8-6292-4e21-a087-11c27c2640a5)
@@ -16,5 +20,6 @@ Clicking on a wonder displays its details including name, description, and an im
 
 
 
-Contributing
+CONTRİBUTİNG
+--------------------
 Contributions are welcome! If you'd like to contribute to this project, feel free to fork this repository, make your changes, and submit a pull request.
